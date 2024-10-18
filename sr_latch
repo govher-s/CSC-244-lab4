@@ -1,0 +1,12 @@
+//sr_latch
+
+	module sr_latch(
+		input logic S, R,
+		output logic Q, notQ
+	);
+	
+	assign notQ = ~(R | Q);
+	assign Q = ~(S | notQ);
+
+
+	endmodule
